@@ -1,0 +1,12 @@
+      @font-face {
+    font-family: myFirstFont;
+    src: url(../fonts/Quicksand-Regular.ttf);
+ 
+}
+
+div, code {
+    font-family: myFirstFont;
+}
+
+
+
