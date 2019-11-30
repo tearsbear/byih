@@ -1,12 +1,10 @@
 SetEnv TZ Asia/Jakarta
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-RewriteBase /
+RewriteBase /byih
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d 
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^ - [L]
-RewriteRule ^welcome$ /index.php
-RewriteRule ^logout$ /logout.php
-RewriteRule ^home@([a-z0-9_]+)?$ /home.php?username=$1 [L,QSA]
+RewriteRule ^welcome$ /byih/index.php
+RewriteRule ^logout$ /byih/logout.php
+RewriteRule ^home@([a-z0-9_]+)?$ /byih/home.php?username=$1 [L,QSA]
